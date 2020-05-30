@@ -17,6 +17,8 @@
 		2020C7BE247ED7F600B11449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2020C7BC247ED7F600B11449 /* LaunchScreen.storyboard */; };
 		2020C7C9247ED7F700B11449 /* TestGame2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020C7C8247ED7F700B11449 /* TestGame2Tests.swift */; };
 		2020C7D4247ED7F700B11449 /* TestGame2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020C7D3247ED7F700B11449 /* TestGame2UITests.swift */; };
+		2020C7E22481FB2000B11449 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020C7E12481FB2000B11449 /* MenuScene.swift */; };
+		2020C7E42481FC6E00B11449 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020C7E32481FC6E00B11449 /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		2020C7CF247ED7F700B11449 /* TestGame2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestGame2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2020C7D3247ED7F700B11449 /* TestGame2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGame2UITests.swift; sourceTree = "<group>"; };
 		2020C7D5247ED7F700B11449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2020C7E12481FB2000B11449 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		2020C7E32481FC6E00B11449 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			children = (
 				2020C7AD247ED7F300B11449 /* AppDelegate.swift */,
 				2020C7AF247ED7F300B11449 /* GameScene.sks */,
+				2020C7E32481FC6E00B11449 /* GameOverScene.swift */,
 				2020C7B1247ED7F300B11449 /* Actions.sks */,
 				2020C7B3247ED7F300B11449 /* GameScene.swift */,
 				2020C7B5247ED7F300B11449 /* GameViewController.swift */,
@@ -112,6 +117,7 @@
 				2020C7BA247ED7F600B11449 /* Assets.xcassets */,
 				2020C7BC247ED7F600B11449 /* LaunchScreen.storyboard */,
 				2020C7BF247ED7F600B11449 /* Info.plist */,
+				2020C7E12481FB2000B11449 /* MenuScene.swift */,
 			);
 			path = TestGame2;
 			sourceTree = "<group>";
@@ -267,7 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2020C7E42481FC6E00B11449 /* GameOverScene.swift in Sources */,
 				2020C7B4247ED7F300B11449 /* GameScene.swift in Sources */,
+				2020C7E22481FB2000B11449 /* MenuScene.swift in Sources */,
 				2020C7B6247ED7F300B11449 /* GameViewController.swift in Sources */,
 				2020C7AE247ED7F300B11449 /* AppDelegate.swift in Sources */,
 			);

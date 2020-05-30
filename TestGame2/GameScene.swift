@@ -8,9 +8,11 @@
 
 import SpriteKit
 import GameplayKit
+import CoreMotion
 
 class GameScene: SKScene {
     
+    let motionManager = CMMotionManager()
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     static var finalScore: Int?;
@@ -76,9 +78,18 @@ class GameScene: SKScene {
         let done = SKAction.removeFromParent();
         enemy.run(SKAction.sequence([move,done]))
     }
-    
+    func processUserMotion(forUpdate currentTime: CFTimeInterval) {
+        if let data = motionManager.accelerometerData {
+            if (fabs(data.acceleration.x) > 0.2) {
+                player.physicsBody?.applyForce(CGVector(dx: CGFloat(data.acceleration.x), dy: CGFloat(data.acceleration.y)))
+        }
+    }
+    }
+
     override func didMove(to view: SKView) {
         
+        motionManager.startAccelerometerUpdates()
+
         physicsWorld.gravity = .zero
         physicsWorld.contactDelegate = self
         
@@ -113,6 +124,8 @@ class GameScene: SKScene {
         player.physicsBody?.contactTestBitMask = PhysicsCategory.enemy
         player.physicsBody?.collisionBitMask = PhysicsCategory.none
         player.physicsBody?.usesPreciseCollisionDetection = true
+        player.physicsBody?.affectedByGravity = false
+        player.physicsBody?.mass = 0.02
         
         
         pointsLabel.textAlignment = .center
